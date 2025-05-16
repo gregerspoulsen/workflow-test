@@ -6,3 +6,4 @@ git branch --show-current
 
 rm bump_content.md
 git rm bump_content.md
+git add CHANGELOG.md

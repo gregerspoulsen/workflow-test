@@ -26,8 +26,6 @@ jobs:
         run: |
           ./update_changelog.sh
 
-      - name: Commit updated CHANGELOG
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: ${{ github.event.pull_request.base.ref }}
-          commit_message: "Update CHANGELOG.md w/ PR #${{ github.event.pull_request.number }}"
+      - name: Commit and push changes
+        run: |
+          ./commit.sh
